@@ -220,6 +220,13 @@ export default function Home() {
                         />
 
                         <ImageCard
+                            title="German Language Training (A1–B2) – 180 Days"
+                            description="Learn German from professional trainers and prepare for international opportunities."
+                            image="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b"
+                            link="/german-language"
+                        />
+
+                        <ImageCard
                             title="Advanced Diploma in HR Management – 6 Months"
                             description="Designed for graduates aiming to start or advance a career in Human Resources."
                             image="https://images.unsplash.com/photo-1552664730-d307ca884978"
@@ -247,12 +254,7 @@ export default function Home() {
                             link="/medical-transcription"
                         />
 
-                        <ImageCard
-                            title="German Language Training (A1–B2) – 180 Days"
-                            description="Learn German from professional trainers and prepare for international opportunities."
-                            image="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b"
-                            link="/german-language"
-                        />
+
 
                     </div>
 
