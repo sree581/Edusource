@@ -4,14 +4,15 @@ export default function HospitalAdmin() {
     return (
         <div className="pt-24 bg-gradient-to-br from-[#0f1b2d] via-[#132238] to-[#182b45] text-white min-h-screen overflow-x-hidden">
 
-            {/* SOFT BACKGROUND GLOW */}
+            {/* BACKGROUND GLOW */}
             <div className="fixed inset-0 -z-10">
                 <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[140px]" />
                 <div className="absolute bottom-[-200px] right-[-200px] w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[140px]" />
             </div>
 
-            {/* ================= HERO SECTION ================= */}
+            {/* ================= HERO ================= */}
             <section className="relative h-[60vh] flex items-center justify-center text-center px-6">
+
                 <div className="absolute inset-0">
                     <img
                         src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3"
@@ -27,102 +28,156 @@ export default function HospitalAdmin() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                 >
+
                     <h1 className="text-4xl md:text-5xl font-semibold mb-6">
                         Diploma in Hospital Administration
                     </h1>
 
                     <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl">
                         <p className="text-lg leading-relaxed text-gray-200">
-                            A one-year diploma for aspiring healthcare administrators. Open to Plus Two graduates, with
-                            classes available both online and ofline. Certified by MSME Technology Development Centre, a
-                            Govt. of India enterprise.
+                            The Diploma in Hospital Administration at Edusource Academy is a
+                            government-approved program designed for students aiming to build
+                            a strong career in the healthcare management sector. As one of the
+                            most reliable hospital administration institutes in Kollam, we
+                            focus on equipping learners with practical skills, industry
+                            awareness, and administrative expertise.
                         </p>
                     </div>
+
                 </motion.div>
             </section>
+
+
+            {/* ================= CERTIFICATION ================= */}
+            <section className="py-20 px-6">
+                <div className="max-w-5xl mx-auto text-center">
+
+                    <h2 className="text-3xl font-semibold mb-6">
+                        Certification
+                    </h2>
+
+                    <p className="text-gray-300 text-lg leading-relaxed">
+                        All students receive a Government-approved course completion
+                        certificate after successfully completing the program.
+                    </p>
+
+                </div>
+            </section>
+
+
+            {/* ================= ELIGIBILITY ================= */}
+            <section className="py-20 px-6">
+                <div className="max-w-6xl mx-auto">
+
+                    <h2 className="text-3xl font-semibold text-center mb-12">
+                        Eligibility
+                    </h2>
+
+                    <div className="grid md:grid-cols-2 gap-8 text-gray-300 text-lg">
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Plus Two pass
+                        </div>
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Degree holders from any stream
+                        </div>
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Working professionals wishing to upskill
+                        </div>
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Mode of Learning: Offline & Online
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
 
             {/* ================= WHAT YOU WILL LEARN ================= */}
             <section className="py-24 px-6">
                 <div className="max-w-6xl mx-auto">
 
-                    {/* Section Heading */}
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-semibold mb-6">
-                            What you will learn?
-                        </h2>
+                    <h2 className="text-3xl font-semibold text-center mb-12">
+                        What You Will Learn
+                    </h2>
 
-                        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto">
-                            <p className="text-gray-300 leading-relaxed text-lg">
-                                This diploma program covers the core foundations of hospital administration including
-                                management principles, hospital planning, medical laws, clinical service coordination, and
-                                software tools used in hospital environments. Learn through hands-on projects, journal work,
-                                and viva voce evaluations.
-                            </p>
+                    <div className="grid md:grid-cols-2 gap-8 text-gray-300">
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Hospital operations & administration
                         </div>
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Medical record management
+                        </div>
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Healthcare communication
+                        </div>
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Patient care coordination
+                        </div>
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Inventory & facility management
+                        </div>
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Hospital HR practices
+                        </div>
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Basic medical terminologies
+                        </div>
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Quality management & safety standards
+                        </div>
+
                     </div>
 
-                    {/* ================= LEARNING CARDS ================= */}
-                    <div className="grid md:grid-cols-2 gap-10">
+                </div>
+            </section>
 
-                        {/* Card 1 */}
-                        <motion.div
-                            whileHover={{ scale: 1.03 }}
-                            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 shadow-xl transition"
-                        >
-                            <h3 className="text-2xl font-semibold mb-6 text-cyan-400">
-                                Hospital Management & Planning
-                            </h3>
 
-                            <p className="text-gray-300 leading-relaxed">
-                                Gain practical knowledge of hospital structure, operations, infrastructure
-                                planning, and healthcare workflows.
-                            </p>
-                        </motion.div>
+            {/* ================= CAREER OPPORTUNITIES ================= */}
+            <section className="pb-24 px-6">
+                <div className="max-w-6xl mx-auto">
 
-                        {/* Card 2 */}
-                        <motion.div
-                            whileHover={{ scale: 1.03 }}
-                            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 shadow-xl transition"
-                        >
-                            <h3 className="text-2xl font-semibold mb-6 text-cyan-400">
-                                Medical & Administrative Skills
-                            </h3>
+                    <h2 className="text-3xl font-semibold text-center mb-12">
+                        Career Opportunities
+                    </h2>
 
-                            <p className="text-gray-300 leading-relaxed">
-                                Understand medical terminology, hospital procedures, and the essentials
-                                of managing clinical and non-clinical services.
-                            </p>
-                        </motion.div>
+                    <div className="grid md:grid-cols-3 gap-8 text-gray-300">
 
-                        {/* Card 3 */}
-                        <motion.div
-                            whileHover={{ scale: 1.03 }}
-                            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 shadow-xl transition"
-                        >
-                            <h3 className="text-2xl font-semibold mb-6 text-cyan-400">
-                                Finance & Inventory Control
-                            </h3>
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Hospital Administrator
+                        </div>
 
-                            <p className="text-gray-300 leading-relaxed">
-                                Learn hospital-focused financial management, budgeting, and efective
-                                inventory/material control systems.
-                            </p>
-                        </motion.div>
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Front Office Executive
+                        </div>
 
-                        {/* Card 4 */}
-                        <motion.div
-                            whileHover={{ scale: 1.03 }}
-                            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 shadow-xl transition"
-                        >
-                            <h3 className="text-2xl font-semibold mb-6 text-cyan-400">
-                                HR & Legal Frameworks
-                            </h3>
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Patient Care Coordinator
+                        </div>
 
-                            <p className="text-gray-300 leading-relaxed">
-                                Develop expertise in human resource management, healthcare laws, and
-                                compliance within medical institutions.
-                            </p>
-                        </motion.div>
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Medical Office Assistant
+                        </div>
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Healthcare Supervisor
+                        </div>
+
+                        <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                            Medical Records Officer
+                        </div>
 
                     </div>
 

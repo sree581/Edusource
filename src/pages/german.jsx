@@ -2,179 +2,160 @@ import { motion } from "framer-motion";
 
 export default function GermanLanguage() {
     return (
-        <div className="pt-24 bg-gradient-to-br from-[#0c1424] via-[#111c33] to-[#162643] text-white min-h-screen overflow-x-hidden">
+        <div className="pt-24 bg-gradient-to-br from-[#0f1b2d] via-[#132238] to-[#182b45] text-white min-h-screen overflow-x-hidden">
 
-            {/* PREMIUM BACKGROUND GLOW */}
+            {/* BACKGROUND GLOW */}
             <div className="fixed inset-0 -z-10">
-                <div className="absolute top-[-250px] left-[-200px] w-[650px] h-[650px] bg-yellow-500/10 rounded-full blur-[160px]" />
-                <div className="absolute bottom-[-250px] right-[-200px] w-[650px] h-[650px] bg-red-500/10 rounded-full blur-[160px]" />
+                <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] bg-yellow-500/10 rounded-full blur-[140px]" />
+                <div className="absolute bottom-[-200px] right-[-200px] w-[600px] h-[600px] bg-red-500/10 rounded-full blur-[140px]" />
             </div>
 
-            {/* ================= HERO SECTION ================= */}
-            <section className="relative h-[65vh] flex items-center justify-center text-center px-6">
+            {/* HERO */}
+            <section className="relative h-[55vh] flex items-center justify-center text-center px-6">
+
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1520986606214-8b456906c813"
-                        alt="German Language Course"
+                        src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b"
+                        alt="German Language Training"
                         className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-black/75"></div>
+                    <div className="absolute inset-0 bg-black/70"></div>
                 </div>
 
                 <motion.div
                     className="relative z-10 max-w-4xl"
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 0.8 }}
                 >
-                    <h1 className="text-4xl md:text-5xl font-semibold mb-6">
-                        Professional Course in German Language (A1–B2 Levels)
+                    <h1 className="text-4xl md:text-5xl font-semibold">
+                        German Language Training (A1–B2)- 180 Days
                     </h1>
-
-                    <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl">
-                        <p className="text-lg leading-relaxed text-gray-200">
-                            A structured language program designed for learners aiming to master German from beginner
-                            (A1) to intermediate (B2) levels. Open to all students and professionals, with online and ofline
-                            class modes. Certified by MSME Technology Development Centre, a Government of India
-                            enterprise, under the Youth Employability Skill Training initiative.
-                        </p>
-                    </div>
                 </motion.div>
+
             </section>
 
-            {/* ================= WHAT YOU WILL LEARN ================= */}
+
+            {/* OVERVIEW */}
+            <section className="py-20 px-6">
+                <div className="max-w-5xl mx-auto">
+
+                    <h2 className="text-3xl font-semibold mb-8 text-center">
+                        Overview
+                    </h2>
+
+                    <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 text-gray-300 leading-relaxed space-y-4">
+
+                        <p>
+                            Become fluent in German with expert-led classes at Edusource Academy — the best German
+                            institute in Kollam. Our A1–B2 level coaching is designed to help students, job seekers, and
+                            aspirants moving to Germany for higher studies or work.
+                        </p>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+            {/* CERTIFICATION + ELIGIBILITY */}
+            <section className="py-16 px-6">
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+
+                    {/* Certification */}
+                    <div className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+                        <h2 className="text-2xl font-semibold mb-4 text-yellow-400">
+                            Certification
+                        </h2>
+
+                        <p className="text-gray-300">
+                            All students receive a Government-approved course completion certificate after successfully
+                            completing the program.
+                        </p>
+                    </div>
+
+                    {/* Eligibility */}
+                    <div className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+                        <h2 className="text-2xl font-semibold mb-4 text-yellow-400">
+                            Eligibility
+                        </h2>
+
+                        <ul className="space-y-2 text-gray-300">
+                            <li>● Plus Two pass</li>
+                            <li>● Degree students</li>
+                            <li>● Individuals moving abroad</li>
+                            <li>Anyone interested in learning the German language</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+
+            {/* WHAT YOU WILL LEARN */}
             <section className="py-24 px-6">
                 <div className="max-w-6xl mx-auto">
 
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-semibold mb-6">
-                            What you will learn?
-                        </h2>
+                    <h2 className="text-3xl font-semibold text-center mb-16">
+                        What You Will Learn
+                    </h2>
 
-                        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto">
-                            <p className="text-gray-300 leading-relaxed text-lg">
-                                This course builds a strong foundation in listening, speaking, reading, and writing skills in
-                                German. Learn grammar, vocabulary, sentence structure, and conversation patterns essential
-                                for travel, higher studies, job applications, and visa interviews. Focused modules aligned with
-                                Goethe exam patterns ensure practical and exam-ready fluency.
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* LEVEL CARDS */}
-                    <div className="grid md:grid-cols-2 gap-10">
+                    <div className="grid md:grid-cols-2 gap-8">
 
                         {[
-                            {
-                                title: "Level A1 – Basic German Introduction",
-                                text: `Understand basic greetings, self-introduction, numbers, days, daily routine phrases, and
-simple sentence formation.`,
-                            },
-                            {
-                                title: "Level A2 – Daily Life Communication",
-                                text: `Learn how to describe situations, ask and answer questions, and express needs and
-opinions in common real-life scenarios like shopping, transport, and social settings.`,
-                            },
-                            {
-                                title: "Level B1 – Independent Usage",
-                                text: `Develop fluency in dealing with professional conversations, structured email writing,
-telephone etiquette, and moderate reading comprehension.`,
-                            },
-                            {
-                                title: "Level B2 – Advanced Communication",
-                                text: `Master complex sentence formation, abstract topics, and argumentation. Prepare for
-work/study in German-speaking countries with interview training and grammar
-refinement`,
-                            },
+                            "● Speaking, reading, writing, listening",
+                            "● German vocabulary & grammar",
+                            "● Everyday communication",
+                            "● Exam-oriented training",
+                            "● Conversation practice",
+                            "● Cultural understanding",
+                            "● Interview & visa-related communication"
                         ].map((item, index) => (
+
                             <motion.div
                                 key={index}
-                                whileHover={{ scale: 1.03 }}
-                                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 shadow-xl transition"
+                                whileHover={{ scale: 1.04 }}
+                                className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-xl"
                             >
-                                <h3 className="text-2xl font-semibold mb-6 text-yellow-400">
-                                    {item.title}
-                                </h3>
-                                <p className="text-gray-300 leading-relaxed whitespace-pre-line">
-                                    {item.text}
-                                </p>
+                                <p className="text-gray-300">{item}</p>
                             </motion.div>
+
                         ))}
+
                     </div>
+
                 </div>
             </section>
 
-            {/* ================= COURSE HIGHLIGHTS ================= */}
-            <section className="py-16 px-6">
-                <div className="max-w-4xl mx-auto space-y-6">
-                    {[
-                        "Goethe Exam-Focused Curriculum",
-                        "Trainers with International Exposure",
-                        "Mock Tests & Section-Wise Analysis",
-                        "Ideal for Study, Work, or PR Applications",
-                    ].map((point, i) => (
-                        <div
-                            key={i}
-                            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-lg text-gray-200"
-                        >
-                            {point}
-                        </div>
-                    ))}
-                </div>
-            </section>
 
-            {/* ================= FAQ SECTION ================= */}
-            <section className="py-24 px-6">
-                <div className="max-w-5xl mx-auto space-y-10">
+            {/* CAREER OPPORTUNITIES */}
+            <section className="pb-24 px-6">
+                <div className="max-w-6xl mx-auto">
 
-                    <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8">
-                        <h3 className="text-2xl font-semibold mb-4 text-red-400">
-                            What can I do after completing this course?
-                        </h3>
-                        <p className="text-gray-300 leading-relaxed">
-                            You’ll be eligible to apply for German-speaking jobs, German universities, visa interviews, and
-                            integration into German work/study environments
-                        </p>
-                    </div>
+                    <h2 className="text-3xl font-semibold text-center mb-16">
+                        Career Opportunities
+                    </h2>
 
-                    <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8">
-                        <h3 className="text-2xl font-semibold mb-4 text-red-400">
-                            Is this course suitable for absolute beginners?
-                        </h3>
-                        <p className="text-gray-300 leading-relaxed">
-                            Yes. The course starts from A1 level and builds gradually to B2. No prior German knowledge is
-                            required.
-                        </p>
-                    </div>
+                    <div className="grid md:grid-cols-2 gap-8">
 
-                    <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8">
-                        <h3 className="text-2xl font-semibold mb-4 text-red-400">
-                            Does the course prepare me for Goethe exams?
-                        </h3>
-                        <p className="text-gray-300 leading-relaxed">
-                            Yes. The curriculum is closely aligned with the Goethe-Institut framework, and mock tests are
-                            provided for exam readiness
-                        </p>
-                    </div>
+                        {[
+                            "● Study abroad pathways",
+                            "● Germany work opportunities",
+                            "● Hospitality & tourism roles",
+                            "● Customer support roles in international companies",
+                            "● Translation/assistant roles"
+                        ].map((job, index) => (
 
-                    <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8">
-                        <h3 className="text-2xl font-semibold mb-4 text-red-400">
-                            What are the course duration and delivery mode?
-                        </h3>
-                        <p className="text-gray-300 leading-relaxed">
-                            The program duration varies by level (typically 2 months per level), and classes are ofered in
-                            both online and ofline formats.
-                        </p>
-                    </div>
+                            <motion.div
+                                key={index}
+                                whileHover={{ scale: 1.05 }}
+                                className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-xl text-center"
+                            >
+                                <p className="text-gray-300">{job}</p>
+                            </motion.div>
 
-                    <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8">
-                        <h3 className="text-2xl font-semibold mb-4 text-red-400">
-                            How does this course support my career or immigration plans?
-                        </h3>
-                        <p className="text-gray-300 leading-relaxed">
-                            German proficiency is a valuable skill in sectors like healthcare, engineering, tourism, education,
-                            and IT. This course makes you language-ready for Europe’s strongest economy
-                        </p>
+                        ))}
+
                     </div>
 
                 </div>
