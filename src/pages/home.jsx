@@ -145,7 +145,7 @@ export default function Home() {
                             <li>Youth Employability Skill Training Co-operative Educational Society</li>
                             <li>Kerala computer saksharatha mission</li>
                             <li>Kerala State Rutronix</li>
-                            <li>Edusource HRD Center (Venture of Skill Spark Pvt Ltd)</li>
+                            <li>National Skill development Corporation</li>
                         </ul>
 
                         <p className="text-gray-400 text-lg leading-relaxed mt-6">
@@ -394,6 +394,20 @@ export default function Home() {
                             </h4>
                             <p className="text-gray-400 text-sm">
                                 Youth employability and vocational training certification.
+                            </p>
+                        </div>
+                        {/* Certificate 5 */}
+                        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 text-center hover:scale-105 transition shadow-xl">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsDb256IEkUoJ2re6i1o9qadXLet-O9JOygw&s"
+                                alt="NSDC Certification"
+                                className="h-24 mx-auto mb-6 object-contain"
+                            />
+                            <h4 className="text-lg font-semibold text-white mb-2">
+                                NSDC Certification
+                            </h4>
+                            <p className="text-gray-400 text-sm">
+                                Government-backed initiative providing industry-aligned training and standardised certification to enhance global employability
                             </p>
                         </div>
 
