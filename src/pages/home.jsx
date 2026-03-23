@@ -141,16 +141,15 @@ export default function Home() {
                         </p>
 
                         <ul className="text-gray-400 text-lg leading-relaxed space-y-2 list-disc pl-5">
-                            <li>Skill Spire Learning Pvt Ltd (Under Akanam)</li>
+
                             <li>Youth Employability Skill Training Co-operative Educational Society</li>
+                            <li>Kerala computer saksharatha mission</li>
                             <li>Kerala State Rutronix</li>
-                            <li>NSDC approved</li>
                             <li>Edusource HRD Center (Venture of Skill Spark Pvt Ltd)</li>
                         </ul>
 
                         <p className="text-gray-400 text-lg leading-relaxed mt-6">
-                            Our mission is to make high-quality skill training accessible, affordable,
-                            and career-focused.
+                            We specialize in providing Industry-relevant training with certification that enhances employability
                         </p>
                     </motion.div>
 
