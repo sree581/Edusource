@@ -14,7 +14,7 @@ function ImageCard({ title, description, image, link }) {
                 <img
                     src={`${image}?auto=format&fit=crop&w=900&q=80`}
                     alt={title}
-                    className="h-[450px] w-full object-cover transition duration-1000 group-hover:scale-105"
+                    className="h-[300px] sm:h-[350px] md:h-[450px] w-full object-cover transition duration-1000 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                 <div className="absolute bottom-10 left-8 right-8 text-white">
@@ -40,7 +40,7 @@ export default function Home() {
             </div>
 
             {/* HERO */}
-            <section id="home" className="relative h-[calc(100vh-6rem)] flex items-center justify-center text-white overflow-hidden">
+            <section id="home" className="relative min-h-[80vh] md:h-[calc(100vh-6rem)] flex items-center justify-center text-white overflow-hidden">
                 <div className="absolute inset-0">
                     <video
                         autoPlay
@@ -55,25 +55,33 @@ export default function Home() {
                 </div>
 
                 <motion.div
-                    className="relative z-10 max-w-6xl px-6 text-center"
+                    className="relative z-10 max-w-6xl px-4 sm:px-6 text-center"
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.2 }}
                 >
-                    <h1 className="text-5xl md:text-6xl font-semibold mb-6">
+                    <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold mb-6 leading-tight">
                         Edusource Academy – Government-Approved Skill Training Institute in Kollam
                     </h1>
 
-                    <p className="text-lg md:text-xl max-w-3xl mx-auto opacity-90 mb-10">
+                    <p className="text-sm sm:text-base md:text-xl max-w-3xl mx-auto opacity-90 mb-10">
                         Build your career with Kollam’s trusted institute offering government-approved programs in
                         Hospital Administration, HR Management, Logistics & Supply Chain, Medical Coding,
                         Medical Transcription, and German language training.
                         Your trusted partner for skill-based learning and career growth.
                     </p>
+                    <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeeKHuTFJTN83a6fvBrkLITycfEkw_AsP9Wp7ZTAYlyi8NdQA/viewform"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-10 py-4 rounded-full shadow-2xl transition text-lg"
+                    >
+                        Apply Now
+                    </a>
                 </motion.div>
             </section>
-            <section className="py-28 bg-[#0c1424]">
-                <div className="max-w-7xl mx-auto px-6 text-center">
+            <section className="py-16 md:py-28 bg-[#0c1424]">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
 
                     <h2 className="text-4xl font-semibold text-white mb-10">
                         Placement Support
@@ -86,7 +94,7 @@ export default function Home() {
                         students become job-ready.
                     </p>
 
-                    <div className="grid md:grid-cols-3 gap-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-12">
 
                         <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
                             <p className="text-gray-300">Career Counselling</p>
@@ -116,8 +124,8 @@ export default function Home() {
                 </div>
             </section>
             {/* ================= ABOUT US ================= */}
-            <section id="about" className="py-28 bg-[#0c1424]">
-                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <section id="about" className="py-16 md:py-28 bg-[#0c1424]">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-16 items-center">
 
                     {/* Text Side */}
                     <motion.div
@@ -174,7 +182,7 @@ export default function Home() {
                 </div>
             </section>
             <section className="py-24 bg-[#0f1b2d]">
-                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12">
 
                     <div className="bg-white/5 p-10 rounded-3xl border border-white/10">
                         <h3 className="text-2xl font-semibold text-white mb-4">Our Mission</h3>
@@ -197,7 +205,7 @@ export default function Home() {
 
             {/* ================= PROGRAMS OFFERED ================= */}
             <section id="programs" className="py-32">
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
                     <h3 className="text-4xl font-semibold text-center mb-6 text-white">
                         Our Popular Programs
@@ -324,7 +332,7 @@ export default function Home() {
 
             {/* CERTIFICATION */}
             <section id="certification" className="py-32">
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
                     {/* Heading */}
                     <div className="text-center mb-16">
@@ -415,8 +423,8 @@ export default function Home() {
                 </div>
             </section>
             {/* ================= GET IN TOUCH ================= */}
-            <section id="contact" className="py-28 bg-gradient-to-b from-[#0f1b2d] to-[#0c1424] text-white">
-                <div className="max-w-7xl mx-auto px-6">
+            <section id="contact" className="py-16 md:py-28 bg-gradient-to-b from-[#0f1b2d] to-[#0c1424] text-white">
+                <div className="max-w-7xl mx-auto px-4">
 
                     {/* Heading */}
                     <div className="text-center mb-16">
@@ -481,6 +489,7 @@ export default function Home() {
                     className="w-8 h-8"
                 />
             </a>
+
         </div>
     );
 }

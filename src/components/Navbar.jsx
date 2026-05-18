@@ -6,6 +6,9 @@ export default function Navbar() {
     const navigate = useNavigate();
     const [active, setActive] = useState("home");
 
+    // ✅ NEW: mobile menu state
+    const [isOpen, setIsOpen] = useState(false);
+
     useEffect(() => {
         if (location.pathname !== "/") return;
 
@@ -45,7 +48,10 @@ export default function Navbar() {
 
     const navItem = (id, label) => (
         <button
-            onClick={() => handleNavClick(id)}
+            onClick={() => {
+                handleNavClick(id);
+                setIsOpen(false); // ✅ close mobile menu
+            }}
             className={`transition ${active === id
                     ? "text-cyan-400 border-b-2 border-cyan-400 pb-1"
                     : "hover:text-cyan-400"
@@ -56,7 +62,7 @@ export default function Navbar() {
     );
 
     return (
-        <nav className="bg-[#0f1b2d] text-white px-12 py-5 flex justify-between items-center shadow-xl sticky top-0 z-50">
+        <nav className="bg-[#0f1b2d] text-white px-6 md:px-12 py-5 flex justify-between items-center shadow-xl sticky top-0 z-50 relative">
 
             {/* LOGO */}
             <Link
@@ -66,8 +72,16 @@ export default function Navbar() {
                 EduSource
             </Link>
 
-            {/* MENU */}
-            <div className="flex gap-8 items-center text-sm font-medium">
+            {/* ✅ HAMBURGER BUTTON (MOBILE ONLY) */}
+            <button
+                className="md:hidden text-2xl"
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                ☰
+            </button>
+
+            {/* ✅ DESKTOP MENU (UNCHANGED, JUST HIDDEN ON MOBILE) */}
+            <div className="hidden md:flex gap-4 flex-wrap justify-center items-center text-sm font-medium">
 
                 {/* SCROLL SECTIONS */}
                 {navItem("home", "Home")}
@@ -88,8 +102,43 @@ export default function Navbar() {
                 <Link to="/blog" className="hover:text-cyan-400">
                     Blog
                 </Link>
-
             </div>
+
+            {/* ✅ MOBILE DROPDOWN MENU */}
+            {isOpen && (
+                <div className="absolute top-full left-0 w-full bg-[#0f1b2d] flex flex-col items-center gap-4 py-4 md:hidden">
+
+                    {navItem("home", "Home")}
+                    {navItem("about", "About")}
+                    {navItem("programs", "Programs")}
+                    {navItem("certification", "Certification")}
+                    {navItem("contact", "Contact")}
+
+                    <Link
+                        to="/admission"
+                        onClick={() => setIsOpen(false)}
+                        className="hover:text-cyan-400"
+                    >
+                        Admission
+                    </Link>
+
+                    <Link
+                        to="/placement"
+                        onClick={() => setIsOpen(false)}
+                        className="hover:text-cyan-400"
+                    >
+                        Placement
+                    </Link>
+
+                    <Link
+                        to="/blog"
+                        onClick={() => setIsOpen(false)}
+                        className="hover:text-cyan-400"
+                    >
+                        Blog
+                    </Link>
+                </div>
+            )}
         </nav>
     );
 }
