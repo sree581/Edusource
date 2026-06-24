@@ -182,61 +182,101 @@ export default function GermanLanguage() {
 
                 <div className="grid md:grid-cols-4 gap-8">
 
-    <Link to="/german-a1">
-        <motion.div
-            whileHover={{ y: -8, scale: 1.03 }}
-            className="bg-gradient-to-br from-yellow-500 to-orange-500
-            h-64 rounded-3xl flex flex-col justify-center items-center
-            shadow-2xl cursor-pointer"
-        >
-            <h3 className="text-6xl font-bold text-white">A1</h3>
-            <p className="text-white/90 mt-3 text-lg">
-                Beginner Level
-            </p>
-        </motion.div>
-    </Link>
+<Link to="/german-a1">
+    <motion.div
+        whileHover={{
+            y: -10,
+            scale: 1.03,
+            boxShadow: "0 0 40px rgba(34,211,238,0.35)"
+        }}
+        className="
+        h-64 rounded-3xl
+        flex flex-col justify-center items-center
+        bg-gradient-to-br from-[#152845] to-[#1d3355]
+        border border-cyan-400/20
+        backdrop-blur-xl
+        shadow-xl
+        cursor-pointer
+        transition-all duration-300"
+    >
+        <h3 className="text-6xl font-bold text-cyan-300">A1</h3>
+        <p className="text-gray-300 mt-3 text-lg">
+            Beginner Level
+        </p>
+    </motion.div>
+</Link>
 
-    <Link to="/german-a2">
-        <motion.div
-            whileHover={{ y: -8, scale: 1.03 }}
-            className="bg-gradient-to-br from-blue-500 to-cyan-500
-            h-64 rounded-3xl flex flex-col justify-center items-center
-            shadow-2xl cursor-pointer"
-        >
-            <h3 className="text-6xl font-bold text-white">A2</h3>
-            <p className="text-white/90 mt-3 text-lg">
-                Elementary Level
-            </p>
-        </motion.div>
-    </Link>
+<Link to="/german-a2">
+    <motion.div
+        whileHover={{
+            y: -10,
+            scale: 1.03,
+            boxShadow: "0 0 40px rgba(34,211,238,0.35)"
+        }}
+        className="
+        h-64 rounded-3xl
+        flex flex-col justify-center items-center
+        bg-gradient-to-br from-[#152845] to-[#1d3355]
+        border border-cyan-400/20
+        backdrop-blur-xl
+        shadow-xl
+        cursor-pointer
+        transition-all duration-300"
+    >
+        <h3 className="text-6xl font-bold text-cyan-300">A2</h3>
+        <p className="text-gray-300 mt-3 text-lg">
+            Elementary Level
+        </p>
+    </motion.div>
+</Link>
 
-    <Link to="/german-b1">
-        <motion.div
-            whileHover={{ y: -8, scale: 1.03 }}
-            className="bg-gradient-to-br from-green-500 to-emerald-500
-            h-64 rounded-3xl flex flex-col justify-center items-center
-            shadow-2xl cursor-pointer"
-        >
-            <h3 className="text-6xl font-bold text-white">B1</h3>
-            <p className="text-white/90 mt-3 text-lg">
-                Intermediate Level
-            </p>
-        </motion.div>
-    </Link>
+<Link to="/german-b1">
+    <motion.div
+        whileHover={{
+            y: -10,
+            scale: 1.03,
+            boxShadow: "0 0 40px rgba(34,211,238,0.35)"
+        }}
+        className="
+        h-64 rounded-3xl
+        flex flex-col justify-center items-center
+        bg-gradient-to-br from-[#152845] to-[#1d3355]
+        border border-cyan-400/20
+        backdrop-blur-xl
+        shadow-xl
+        cursor-pointer
+        transition-all duration-300"
+    >
+        <h3 className="text-6xl font-bold text-cyan-300">B1</h3>
+        <p className="text-gray-300 mt-3 text-lg">
+            Intermediate Level
+        </p>
+    </motion.div>
+</Link>
 
-    <Link to="/german-b2">
-        <motion.div
-            whileHover={{ y: -8, scale: 1.03 }}
-            className="bg-gradient-to-br from-purple-500 to-pink-500
-            h-64 rounded-3xl flex flex-col justify-center items-center
-            shadow-2xl cursor-pointer"
-        >
-            <h3 className="text-6xl font-bold text-white">B2</h3>
-            <p className="text-white/90 mt-3 text-lg">
-                Upper Intermediate
-            </p>
-        </motion.div>
-    </Link>
+<Link to="/german-b2">
+    <motion.div
+        whileHover={{
+            y: -10,
+            scale: 1.03,
+            boxShadow: "0 0 40px rgba(34,211,238,0.35)"
+        }}
+        className="
+        h-64 rounded-3xl
+        flex flex-col justify-center items-center
+        bg-gradient-to-br from-[#152845] to-[#1d3355]
+        border border-cyan-400/20
+        backdrop-blur-xl
+        shadow-xl
+        cursor-pointer
+        transition-all duration-300"
+    >
+        <h3 className="text-6xl font-bold text-cyan-300">B2</h3>
+        <p className="text-gray-300 mt-3 text-lg">
+            Upper Intermediate Level
+        </p>
+    </motion.div>
+</Link>
 
 </div>
 

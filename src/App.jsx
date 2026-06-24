@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 
 import Home from "./pages/home";
 import ScrollToTop from "./components/ScrollToTop";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 import CountUp from "react-countup";
 import HospitalAdmin from "./pages/hospitaladmin";
 import HRManagement from "./pages/hr";
@@ -25,6 +26,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <Navbar />
+      <WhatsAppFloat />
 
       <Routes>
         <Route path="/" element={<Home />} />
