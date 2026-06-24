@@ -8,7 +8,10 @@ export default function Navbar() {
 
     // ✅ NEW: mobile menu state
     const [isOpen, setIsOpen] = useState(false);
-
+    useEffect(() => {
+    if (location.pathname !== "/") return;
+    setActive("home");
+}, [location.pathname]);
     useEffect(() => {
         if (location.pathname !== "/") return;
 
@@ -63,14 +66,21 @@ export default function Navbar() {
 
     return (
         <nav className="bg-[#0f1b2d] text-white px-6 md:px-12 py-5 flex justify-between items-center shadow-xl sticky top-0 z-50 relative">
+{/* LOGO */}
+<Link
+    to="/"
+    className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition"
+>
+    <img
+        src="/images/edusource-logo.jpeg"
+        alt="EduSource Logo"
+        className="h-10 w-10 rounded-full object-cover border border-cyan-400"
+    />
 
-            {/* LOGO */}
-            <Link
-                to="/"
-                className="text-2xl font-semibold text-cyan-400 hover:text-cyan-300 transition"
-            >
-                EduSource
-            </Link>
+    <span className="text-2xl font-semibold">
+        EduSource
+    </span>
+</Link>
 
             {/* ✅ HAMBURGER BUTTON (MOBILE ONLY) */}
             <button

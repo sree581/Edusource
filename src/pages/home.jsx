@@ -38,91 +38,55 @@ export default function Home() {
                 <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] bg-blue-500/15 rounded-full blur-[140px]" />
                 <div className="absolute bottom-[-200px] right-[-200px] w-[600px] h-[600px] bg-cyan-400/15 rounded-full blur-[140px]" />
             </div>
+            
 
-            {/* HERO */}
-            <section id="home" className="relative min-h-[80vh] md:h-[calc(100vh-6rem)] flex items-center justify-center text-white overflow-hidden">
-                <div className="absolute inset-0">
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full h-full object-cover"
-                    >
-                        <source src="/videos/students.mp4" type="video/mp4" />
-                    </video>
-                    <div className="absolute inset-0 bg-black/70"></div>
-                </div>
+           {/* HERO */}
+<section id="home" className="relative min-h-[80vh] md:h-[calc(100vh-6rem)] flex items-center justify-center text-white overflow-hidden">
+    <div className="absolute inset-0">
+        <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+        >
+            <source src="/videos/students.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/70"></div>
+    </div>
 
-                <motion.div
-                    className="relative z-10 max-w-6xl px-4 sm:px-6 text-center"
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.2 }}
-                >
-                    <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold mb-6 leading-tight">
-                        Edusource Academy – Government-Approved Skill Training Institute in Kollam
-                    </h1>
+    <motion.div
+        className="relative z-10 max-w-6xl px-4 sm:px-6 text-center"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2 }}
+    >
+        <h1 className="text-3xl sm:text-3xl md:text-4xl font-semibold mb-6 leading-tight">
+            <span className="text-4xl sm:text-5xl md:text-7xl font-bold">
+                Edusource Academy
+            </span>{" "}
+            Government Approved Skill Training Institute in Kollam
+        </h1>
 
-                    <p className="text-sm sm:text-base md:text-xl max-w-3xl mx-auto opacity-90 mb-10">
-                        Build your career with Kollam’s trusted institute offering government-approved programs in
-                        Hospital Administration, HR Management, Logistics & Supply Chain, Medical Coding,
-                        Medical Transcription, and German language training.
-                        Your trusted partner for skill-based learning and career growth.
-                    </p>
-                    <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSeeKHuTFJTN83a6fvBrkLITycfEkw_AsP9Wp7ZTAYlyi8NdQA/viewform"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-10 py-4 rounded-full shadow-2xl transition text-lg"
-                    >
-                        Apply Now
-                    </a>
-                </motion.div>
-            </section>
-            <section className="py-16 md:py-28 bg-[#0c1424]">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+        <p className="text-sm sm:text-base md:text-xl max-w-3xl mx-auto opacity-90 mb-10">
+            Build your career with Kollam's trusted institute offering government-approved programs in
+            Hospital Administration, HR Management, Logistics & Supply Chain, Medical Coding,
+            Medical Transcription, and German language training.
+            Your trusted partner for skill-based learning and career growth.
+        </p>
 
-                    <h2 className="text-4xl font-semibold text-white mb-10">
-                        Placement Support
-                    </h2>
+        <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLSeeKHuTFJTN83a6fvBrkLITycfEkw_AsP9Wp7ZTAYlyi8NdQA/viewform"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-10 py-4 rounded-full shadow-2xl transition text-lg"
+>
+    Apply Now
+</a>
+    </motion.div>
 
-                    <p className="text-gray-400 max-w-3xl mx-auto mb-12 text-lg">
-                        Edusource Academy provides strong placement assistance including
-                        career counselling, resume preparation, interview training,
-                        and job guidance through partnered industries to ensure
-                        students become job-ready.
-                    </p>
+</section>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-12">
-
-                        <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
-                            <p className="text-gray-300">Career Counselling</p>
-                        </div>
-
-                        <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
-                            <p className="text-gray-300">Resume Building Support</p>
-                        </div>
-
-                        <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
-                            <p className="text-gray-300">Interview Preparation</p>
-                        </div>
-
-                        <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
-                            <p className="text-gray-300">Industry Training Sessions</p>
-                        </div>
-
-                        <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
-                            <p className="text-gray-300">Job Updates & Guidance</p>
-                        </div>
-
-                        <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
-                            <p className="text-gray-300">Skill Assessments</p>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
             {/* ================= ABOUT US ================= */}
             <section id="about" className="py-16 md:py-28 bg-[#0c1424]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-16 items-center">
@@ -181,28 +145,6 @@ export default function Home() {
 
                 </div>
             </section>
-            <section className="py-24 bg-[#0f1b2d]">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12">
-
-                    <div className="bg-white/5 p-10 rounded-3xl border border-white/10">
-                        <h3 className="text-2xl font-semibold text-white mb-4">Our Mission</h3>
-                        <p className="text-gray-400">
-                            To provide quality education and government-certified skill training
-                            that prepares students for real industry challenges and global opportunities.
-                        </p>
-                    </div>
-
-                    <div className="bg-white/5 p-10 rounded-3xl border border-white/10">
-                        <h3 className="text-2xl font-semibold text-white mb-4">Our Vision</h3>
-                        <p className="text-gray-400">
-                            To become Kerala’s most trusted skill development centre,
-                            helping young learners build successful and sustainable careers.
-                        </p>
-                    </div>
-
-                </div>
-            </section>
-
             {/* ================= PROGRAMS OFFERED ================= */}
             <section id="programs" className="py-32">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -219,52 +161,63 @@ export default function Home() {
                     {/* PROGRAM CARDS */}
                     <div className="grid md:grid-cols-3 gap-12">
 
-                        <ImageCard
-                            title="Diploma in Hospital Administration – 1 Year"
-                            description="A career-building program for those who want to step into healthcare administration."
-                            image="https://images.unsplash.com/photo-1576091160550-2173dba999ef"
-                            link="/hospital-administration"
-                        />
+    <ImageCard
+        title="German Language Training (A1–B2) – 180 Days"
+        description="Learn German from professional trainers and prepare for international opportunities."
+        image="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b"
+        link="/german-language"
+    />
 
-                        <ImageCard
-                            title="German Language Training (A1–B2) – 180 Days"
-                            description="Learn German from professional trainers and prepare for international opportunities."
-                            image="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b"
-                            link="/german-language"
-                        />
+    <ImageCard
+        title="Diploma in Hospital Administration – 1 Year"
+        description="A career-building program for those who want to step into healthcare administration."
+        image="https://images.unsplash.com/photo-1576091160550-2173dba999ef"
+        link="/hospital-administration"
+    />
 
-                        <ImageCard
-                            title="Advanced Diploma in HR Management – 6 Months"
-                            description="Designed for graduates aiming to start or advance a career in Human Resources."
-                            image="https://images.unsplash.com/photo-1552664730-d307ca884978"
-                            link="/hr-management"
-                        />
+    <ImageCard
+        title="Advanced Diploma in HR Management – 6 Months"
+        description="Designed for graduates aiming to start or advance a career in Human Resources."
+        image="https://images.unsplash.com/photo-1552664730-d307ca884978"
+        link="/hr-management"
+    />
 
-                        <ImageCard
-                            title="Medical Coding – 3 Months"
-                            description="A professional certification program for those aiming to enter the growing medical coding industry."
-                            image="https://images.unsplash.com/photo-1579684385127-1ef15d508118"
-                            link="/medical-coding"
-                        />
+    <ImageCard
+        title="Diploma in AI Integrated Digital Marketing – 4 Months"
+        description="Master modern digital marketing using AI-powered tools, SEO, social media marketing, content creation, paid advertising, and analytics."
+        image="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+        link="/ai-digital-marketing"
+    />
 
-                        <ImageCard
-                            title="Diploma in Logistics & Shipping Management – 6 Months"
-                            description="One of the most job-oriented programs, preparing students for logistics, warehouse, and shipping industries."
-                            image="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d"
-                            link="/logistics-shipping"
-                        />
+    <ImageCard
+        title="Diploma in AI Integrated Video Editing – 6 Months"
+        description="Learn professional video editing, motion graphics, content production, and AI-assisted editing techniques for today's media industry."
+        image="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d"
+        link="/ai-video-editing"
+    />
 
-                        <ImageCard
-                            title="Medical Transcription – 4 Months"
-                            description="Comprehensive training to build skills required for transcription careers in the medical field."
-                            image="https://images.unsplash.com/photo-1585435557343-3b092031a831"
-                            link="/medical-transcription"
-                        />
+    <ImageCard
+        title="Medical Coding – 3 Months"
+        description="A professional certification program for those aiming to enter the growing medical coding industry."
+        image="https://images.unsplash.com/photo-1579684385127-1ef15d508118"
+        link="/medical-coding"
+    />
 
+    <ImageCard
+        title="Diploma in Logistics & Shipping Management – 6 Months"
+        description="One of the most job-oriented programs, preparing students for logistics, warehouse, and shipping industries."
+        image="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d"
+        link="/logistics-shipping"
+    />
 
+    <ImageCard
+        title="Medical Transcription – 4 Months"
+        description="Comprehensive training to build skills required for transcription careers in the medical field."
+        image="https://images.unsplash.com/photo-1585435557343-3b092031a831"
+        link="/medical-transcription"
+    />
 
-                    </div>
-
+</div>
 
                     {/* WHY CHOOSE US */}
                     <div className="mt-28">
@@ -277,7 +230,7 @@ export default function Home() {
 
                             <p>✔ Government-approved certificates</p>
                             <p>✔ Job-oriented practical learning</p>
-                            <p>✔ Experienced trainers with 2+ years’ expertise</p>
+                            <p>✔ Experienced trainers with 2+ years' expertise</p>
                             <p>✔ Best German language training in Kollam</p>
                             <p>✔ Placement assistance for all programs</p>
                             <p>✔ Affordable fees</p>
@@ -288,44 +241,54 @@ export default function Home() {
 
                     </div>
 
+                </div>
+            </section>
 
-                    {/* PLACEMENT SUPPORT */}
-                    <div className="mt-24 text-center max-w-3xl mx-auto">
+            <section className="py-24 bg-[#0f1b2d]">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12">
 
-                        <h3 className="text-3xl font-semibold text-white mb-6">
-                            Placement Support
-                        </h3>
-
-                        <p className="text-gray-400 text-lg leading-relaxed">
-                            We provide career guidance, resume preparation, interview training,
-                            and support through our partnered industries — ensuring every student
-                            is job-ready.
+                    <div className="bg-white/5 p-10 rounded-3xl border border-white/10">
+                        <h3 className="text-2xl font-semibold text-white mb-4">Our Mission</h3>
+                        <p className="text-gray-400">
+                            To provide quality education and government-certified skill training
+                            that prepares students for real industry challenges and global opportunities.
                         </p>
-
                     </div>
 
-
-                    {/* ENROLL CTA */}
-                    <div className="mt-16 text-center">
-
-                        <h3 className="text-2xl font-semibold text-white mb-4">
-                            Enroll Today
-                        </h3>
-
-                        <p className="text-gray-400 mb-8">
-                            Start your journey towards a successful career.
-                            Build your future with Edusource Academy.
+                    <div className="bg-white/5 p-10 rounded-3xl border border-white/10">
+                        <h3 className="text-2xl font-semibold text-white mb-4">Our Vision</h3>
+                        <p className="text-gray-400">
+                            To become Kerala's most trusted skill development centre,
+                            helping young learners build successful and sustainable careers.
                         </p>
-
-                        <a
-                            href="#contact"
-                            className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-full transition"
-                        >
-                            Contact Us
-                        </a>
-
                     </div>
 
+                </div>
+            </section>
+
+            
+
+            
+
+            {/* ENROLL CTA */}
+            <section className="py-16 bg-[#0f1b2d]">
+                <div className="mt-16 text-center">
+
+                    <h3 className="text-2xl font-semibold text-white mb-4">
+                        Enroll Today
+                    </h3>
+
+                    <p className="text-gray-400 mb-8">
+                        Start your journey towards a successful career.
+                        Build your future with Edusource Academy.
+                    </p>
+
+                    <a
+    href="#contact"
+    className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-full transition"
+>
+    Contact Us
+</a>
                 </div>
             </section>
 
@@ -422,6 +385,51 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            {/* ================= PLACEMENT SUPPORT ================= */}
+            <section className="py-16 md:py-28 bg-[#0c1424]">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+
+                    <h2 className="text-4xl font-semibold text-white mb-10">
+                        Placement Support
+                    </h2>
+
+                    <p className="text-gray-400 max-w-3xl mx-auto mb-12 text-lg">
+                        Edusource Academy provides strong placement assistance including
+                        career counselling, resume preparation, interview training,
+                        and job guidance through partnered industries to ensure
+                        students become job-ready.
+                    </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-12">
+
+                        <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
+                            <p className="text-gray-300">Career Counselling</p>
+                        </div>
+
+                        <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
+                            <p className="text-gray-300">Resume Building Support</p>
+                        </div>
+
+                        <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
+                            <p className="text-gray-300">Interview Preparation</p>
+                        </div>
+
+                        <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
+                            <p className="text-gray-300">Industry Training Sessions</p>
+                        </div>
+
+                        <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
+                            <p className="text-gray-300">Job Updates & Guidance</p>
+                        </div>
+
+                        <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
+                            <p className="text-gray-300">Skill Assessments</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
             {/* ================= GET IN TOUCH ================= */}
             <section id="contact" className="py-16 md:py-28 bg-gradient-to-b from-[#0f1b2d] to-[#0c1424] text-white">
                 <div className="max-w-7xl mx-auto px-4">
@@ -478,17 +486,17 @@ export default function Home() {
             </section>
             {/* ================= WHATSAPP FLOAT ================= */}
             <a
-                href="https://wa.me/919895953159"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="fixed bottom-6 left-6 z-50 bg-green-500 hover:bg-green-600 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition duration-300"
-            >
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                    alt="WhatsApp"
-                    className="w-8 h-8"
-                />
-            </a>
+    href="https://wa.me/919895953159"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="fixed bottom-6 left-6 z-50 bg-green-500 hover:bg-green-600 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition duration-300"
+>
+    <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp"
+        className="w-8 h-8"
+    />
+</a>
 
         </div>
     );

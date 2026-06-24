@@ -1,10 +1,53 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
+import CountUp from "react-countup";
 
+function Counter({ end, suffix = "+" }) {
+    const ref = useRef(null);
+
+    const isInView = useInView(ref, {
+        amount: 0.5,
+    });
+
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        if (!isInView) {
+            setCount(0);
+            return;
+        }
+
+        let start = 0;
+        const duration = 1200;
+        const increment = end / (duration / 16);
+
+        const timer = setInterval(() => {
+            start += increment;
+
+            if (start >= end) {
+                setCount(end);
+                clearInterval(timer);
+            } else {
+                setCount(Math.floor(start));
+            }
+        }, 16);
+
+        return () => clearInterval(timer);
+    }, [isInView, end]);
+
+    return (
+        <span ref={ref}>
+            {count}
+            {suffix}
+        </span>
+    );
+}
 export default function GermanLanguage() {
     return (
         <div className="pt-24 bg-gradient-to-br from-[#0f1b2d] via-[#132238] to-[#182b45] text-white min-h-screen overflow-x-hidden">
 
-            {/* BACKGROUND */}
+            {/* BACKGROUND GLOW */}
             <div className="fixed inset-0 -z-10">
                 <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] bg-yellow-500/10 rounded-full blur-[140px]" />
                 <div className="absolute bottom-[-200px] right-[-200px] w-[600px] h-[600px] bg-red-500/10 rounded-full blur-[140px]" />
@@ -12,6 +55,7 @@ export default function GermanLanguage() {
 
             {/* HERO */}
             <section className="relative h-[60vh] flex items-center justify-center text-center px-6">
+
                 <div className="absolute inset-0">
                     <img
                         src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b"
@@ -22,138 +66,242 @@ export default function GermanLanguage() {
                 </div>
 
                 <motion.div
-                    className="relative z-10 max-w-4xl"
+                    className="relative z-10 max-w-5xl"
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
                 >
                     <h1 className="text-5xl md:text-6xl font-semibold leading-tight">
                         German Language Training (A1–B2)
                     </h1>
+
                     <p className="mt-6 text-lg text-gray-300">
-                        Build real fluency. Study, work, and grow in Germany with confidence.
+                        Learn German with confidence for Higher Studies,
+                        Ausbildung, Career Opportunities and Life in Germany.
                     </p>
                 </motion.div>
+
             </section>
 
-            {/* INTRO */}
-            <section className="py-20 px-6 max-w-5xl mx-auto text-gray-300 space-y-6 leading-relaxed text-lg">
-                <p>
-                    Learn German with confidence at <span className="text-yellow-400 font-medium">Edusource Academy, Kollam</span> —
-                    your trusted destination for structured, practical, and result-oriented German language training.
-                </p>
-                <p>
-                    Whether you are planning higher studies, Ausbildung, or a career in Germany,
-                    our A1–B2 programs are designed to take you from a complete beginner to a confident speaker
-                    through real-life communication practice, expert guidance, and consistent support.
-                </p>
+            {/* ABOUT */}
+            <section className="py-20 px-6">
+                <div className="max-w-5xl mx-auto">
+
+                    <h2 className="text-4xl font-semibold text-center mb-10">
+                        Best German Language Institute in Kollam
+                    </h2>
+
+                    <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 text-gray-300 leading-relaxed space-y-6">
+
+                        <p>
+                            As a trusted academic institution, we provide expert-led German
+                            language programs for learners at all levels.
+                        </p>
+
+                        <p>
+                            Recognized as one of the best German language institutes in Kollam,
+                            we offer comprehensive German language courses with interactive
+                            classes, experienced trainers, and practical learning methods.
+                        </p>
+
+                        <p>
+                            Our curriculum includes exam preparation, speaking practice,
+                            listening exercises, reading development, and personalized
+                            guidance to ensure fluency and confidence.
+                        </p>
+
+                        <p>
+                            At our German language institute in Kollam, we are committed
+                            to fostering academic excellence and helping students achieve
+                            their language and career goals through international-standard
+                            teaching techniques.
+                        </p>
+
+                        <p>
+                            Learn German with confidence at Edusource Academy, Kollam —
+                            your trusted destination for structured, practical,
+                            and result-oriented German language training.
+                        </p>
+
+                        <p>
+                            Whether you are planning higher studies, Ausbildung,
+                            or a career in Germany, our A1–B2 programs are designed
+                            to take you from a complete beginner to a confident speaker
+                            through real-life communication practice, expert guidance,
+                            and continuous support.
+                        </p>
+
+                    </div>
+
+                </div>
             </section>
 
             {/* WHY CHOOSE */}
-            <section className="py-16 px-6 max-w-6xl mx-auto">
-                <h2 className="text-3xl text-center mb-12 font-semibold">
-                    Why Edusource Academy?
-                </h2>
+            <section className="py-20 px-6">
 
-                <div className="grid md:grid-cols-3 gap-8">
-                    {[
-                        "Small batches for focused attention and speaking practice",
-                        "Experienced trainers with practical teaching approach",
-                        "Real-life communication training (not just theory)",
-                        "Beginner-friendly structured learning system",
-                        "Interview & visa communication support",
-                        "Government-approved certification"
-                    ].map((item, i) => (
-                        <motion.div key={i} whileHover={{ scale: 1.05 }}
-                            className="bg-white/5 border border-white/10 p-6 rounded-2xl text-center">
-                            {item}
-                        </motion.div>
-                    ))}
+                <div className="max-w-6xl mx-auto">
+
+                    <h2 className="text-4xl font-semibold text-center mb-14">
+                        Why Choose Edusource Academy?
+                    </h2>
+
+                    <div className="grid md:grid-cols-3 gap-8">
+
+                        {[
+                            "Small batches for focused attention and speaking practice",
+                            "Experienced trainers with practical teaching approach",
+                            "Interactive classroom sessions",
+                            "Real-life communication training",
+                            "Exam preparation support",
+                            "Interview & visa communication guidance",
+                            "Government-approved certification",
+                            "Personalized student mentoring",
+                            "Structured A1–B2 learning pathway"
+                        ].map((item, index) => (
+
+                            <motion.div
+                                key={index}
+                                whileHover={{ scale: 1.05 }}
+                                className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-xl"
+                            >
+                                <p className="text-gray-300">
+                                    {item}
+                                </p>
+                            </motion.div>
+
+                        ))}
+
+                    </div>
+
                 </div>
+
             </section>
 
-            {/* LEVELS */}
-            <section className="py-24 px-6 max-w-6xl mx-auto space-y-16">
-                <h2 className="text-3xl text-center font-semibold">
-                    German Course Levels (A1 – B2)
-                </h2>
+            {/* LEVEL CARDS */}
+            <section className="py-24 px-6">
 
-                {/* A1 */}
-                <div className="bg-white/5 p-8 rounded-3xl border border-white/10">
-                    <h3 className="text-2xl text-yellow-400 mb-4">A1 Level – Beginner</h3>
-                    <p className="text-gray-300 mb-4">
-                        This is where your journey begins. You will start from zero and build the foundation of the German language.
-                    </p>
-                    <ul className="space-y-2 text-gray-300">
-                        <li>● German alphabets, pronunciation & sounds</li>
-                        <li>● Introducing yourself and basic conversations</li>
-                        <li>● Asking and answering simple questions</li>
-                        <li>● Forming basic sentences</li>
-                        <li>● Understanding slow and clear speech</li>
-                    </ul>
-                    <p className="mt-4 text-gray-400">
-                        👉 By the end of A1, you overcome fear and start speaking basic German confidently.
-                    </p>
-                </div>
+                <div className="grid md:grid-cols-4 gap-8">
 
-                {/* A2 */}
-                <div className="bg-white/5 p-8 rounded-3xl border border-white/10">
-                    <h3 className="text-2xl text-yellow-400 mb-4">A2 Level – Elementary</h3>
-                    <p className="text-gray-300 mb-4">
-                        A2 strengthens your basics and helps you communicate more comfortably in everyday situations.
-                    </p>
-                    <ul className="space-y-2 text-gray-300">
-                        <li>● Talking about daily routines and surroundings</li>
-                        <li>● Reading and writing short texts</li>
-                        <li>● Expanding vocabulary and grammar knowledge</li>
-                        <li>● Understanding commonly used expressions</li>
-                    </ul>
-                    <p className="mt-4 text-gray-400">
-                        👉 At A2, you begin to speak more naturally and understand conversations better.
-                    </p>
-                </div>
+    <Link to="/german-a1">
+        <motion.div
+            whileHover={{ y: -8, scale: 1.03 }}
+            className="bg-gradient-to-br from-yellow-500 to-orange-500
+            h-64 rounded-3xl flex flex-col justify-center items-center
+            shadow-2xl cursor-pointer"
+        >
+            <h3 className="text-6xl font-bold text-white">A1</h3>
+            <p className="text-white/90 mt-3 text-lg">
+                Beginner Level
+            </p>
+        </motion.div>
+    </Link>
 
-                {/* B1 */}
-                <div className="bg-white/5 p-8 rounded-3xl border border-white/10">
-                    <h3 className="text-2xl text-yellow-400 mb-4">B1 Level – Intermediate</h3>
-                    <p className="text-gray-300 mb-4">
-                        B1 is where communication becomes meaningful and independent.
-                    </p>
-                    <ul className="space-y-2 text-gray-300">
-                        <li>● Understanding longer conversations</li>
-                        <li>● Expressing opinions, ideas, and experiences</li>
-                        <li>● Handling travel and real-life scenarios</li>
-                        <li>● Writing structured paragraphs</li>
-                    </ul>
-                    <p className="mt-4 text-gray-400">
-                        👉 After B1, you can manage most real-life situations in Germany independently.
-                    </p>
-                </div>
+    <Link to="/german-a2">
+        <motion.div
+            whileHover={{ y: -8, scale: 1.03 }}
+            className="bg-gradient-to-br from-blue-500 to-cyan-500
+            h-64 rounded-3xl flex flex-col justify-center items-center
+            shadow-2xl cursor-pointer"
+        >
+            <h3 className="text-6xl font-bold text-white">A2</h3>
+            <p className="text-white/90 mt-3 text-lg">
+                Elementary Level
+            </p>
+        </motion.div>
+    </Link>
 
-                {/* B2 */}
-                <div className="bg-white/5 p-8 rounded-3xl border border-white/10">
-                    <h3 className="text-2xl text-yellow-400 mb-4">B2 Level – Upper Intermediate</h3>
-                    <p className="text-gray-300 mb-4">
-                        B2 prepares you for professional and academic environments.
-                    </p>
-                    <ul className="space-y-2 text-gray-300">
-                        <li>● Understanding complex texts and discussions</li>
-                        <li>● Speaking fluently and confidently</li>
-                        <li>● Participating in interviews and debates</li>
-                        <li>● Writing detailed reports and formal communication</li>
-                    </ul>
-                    <p className="mt-4 text-gray-400">
-                        👉 B2 makes you fully ready to study, work, and live in Germany.
-                    </p>
-                </div>
+    <Link to="/german-b1">
+        <motion.div
+            whileHover={{ y: -8, scale: 1.03 }}
+            className="bg-gradient-to-br from-green-500 to-emerald-500
+            h-64 rounded-3xl flex flex-col justify-center items-center
+            shadow-2xl cursor-pointer"
+        >
+            <h3 className="text-6xl font-bold text-white">B1</h3>
+            <p className="text-white/90 mt-3 text-lg">
+                Intermediate Level
+            </p>
+        </motion.div>
+    </Link>
+
+    <Link to="/german-b2">
+        <motion.div
+            whileHover={{ y: -8, scale: 1.03 }}
+            className="bg-gradient-to-br from-purple-500 to-pink-500
+            h-64 rounded-3xl flex flex-col justify-center items-center
+            shadow-2xl cursor-pointer"
+        >
+            <h3 className="text-6xl font-bold text-white">B2</h3>
+            <p className="text-white/90 mt-3 text-lg">
+                Upper Intermediate
+            </p>
+        </motion.div>
+    </Link>
+
+</div>
+
             </section>
 
+            {/* STATISTICS */}
+<section className="py-24">
+    <div className="max-w-7xl mx-auto px-6">
+
+        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10">
+
+            <div className="grid md:grid-cols-4 gap-10 text-center">
+
+                <div>
+                    <h3 className="text-5xl font-bold text-yellow-400 mb-3">
+                        <Counter end={100} />
+                    </h3>
+                    <p className="text-gray-300 text-lg">
+                        Completed Classes
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-5xl font-bold text-yellow-400 mb-3">
+                        <Counter end={3} />
+                    </h3>
+                    <p className="text-gray-300 text-lg">
+                        Years Of Experience
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-5xl font-bold text-yellow-400 mb-3">
+                        <Counter end={100} />
+                    </h3>
+                    <p className="text-gray-300 text-lg">
+                        Satisfied Students
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-5xl font-bold text-yellow-400 mb-3">
+                        <Counter end={10} />
+                    </h3>
+                    <p className="text-gray-300 text-lg">
+                        Certified Trainers
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
             {/* CTA */}
             <section className="py-24 text-center">
-                <h2 className="text-3xl font-semibold mb-6">
+
+                <h2 className="text-4xl font-semibold mb-6">
                     Start Your German Journey Today
                 </h2>
+
                 <p className="text-gray-400 mb-10">
-                    Limited seats. Get guidance, demo class details, and fee structure from our team.
+                    Get expert guidance, course details, fee structure,
+                    and admission assistance from our team.
                 </p>
 
                 <a
@@ -164,6 +312,7 @@ export default function GermanLanguage() {
                 >
                     Apply Now
                 </a>
+
             </section>
 
         </div>
